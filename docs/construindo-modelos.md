@@ -335,9 +335,9 @@ Fonte: Envolvidos do Projeto do Eixo 7
 
 Essas foram as métricas utilizadas:
 
-Acurácia: é obtida pela divisão de quantidade de acertos e o total de entradas. Essa métrica foi utilizada na Árvore de Decisão, KNN, Naive Bayes e o Random Forest.
-F1-score: Média calculada com base na precisão e revocação. Essa métrica foi utilizada na Árvore de Decisão.
-Recall: Esta métrica avalia a capacidade do método detectar com sucesso resultados classificados como positivos. Foi utilizado para avaliar o modelo KNN.
+* Acurácia: é obtida pela divisão de quantidade de acertos e o total de entradas. Essa métrica foi utilizada na Árvore de Decisão, KNN, Naive Bayes e o Random Forest.
+* F1-score: Média calculada com base na precisão e revocação. Essa métrica foi utilizada na Árvore de Decisão.
+* Recall: Esta métrica avalia a capacidade do método detectar com sucesso resultados classificados como positivos. Foi utilizado para avaliar o modelo KNN.
 
 A fonte de definicação está anexado na etapa 1.
 
