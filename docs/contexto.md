@@ -336,3 +336,6 @@ Colesterol alto: entenda como tratar. **Dr. Eduardo Enrique**, Ano não informad
 
 
 Tratamento para hipertensão: por que consultar um cardiologista é importante? **WeCor**, 2020. Disponível em: <https://www.wecor.com.br/tratamento-para-hipertensao#:~:text=A%20losartana%20%C3%A9%20um%20medicamento,com%20hipertens%C3%A3o%20ou%20insufici%C3%AAncia%20card%C3%ADaca.>. Acesso em: 23 de set. de 2024.
+
+
+MARIANO, Diego. Métricas de avaliação em machine learning. **Bioinfo**, 2021. Disponível em: <https://bioinfo.com.br/metricas-de-avaliacao-em-machine-learning-acuracia-sensibilidade-precisao-especificidade-e-f-score/>. Acesso em 24 de nov. de 2024.
