@@ -329,14 +329,6 @@ Fonte: Envolvidos do Projeto do Eixo 7
 
 ![Captura de tela 2024-11-24 164507](https://github.com/user-attachments/assets/f91ecc85-6041-46f1-9aaf-dcaf89028012)
 
-# Descrição dos modelos
-
-Nesta seção, conhecendo os dados e de posse dos dados preparados, é hora de descrever os algoritmos de aprendizado de máquina selecionados para a construção dos modelos propostos. Inclua informações abrangentes sobre cada algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha de cada um dos algoritmos. 
-
-Explore aspectos específicos, como o ajuste dos parâmetros livres de cada algoritmo. Lembre-se de experimentar parâmetros diferentes e principalmente, de justificar as escolhas realizadas.
-
-Como parte da comprovação de construção dos modelos, um vídeo de demonstração com todas as etapas de pré-processamento e de execução dos modelos deverá ser entregue. Este vídeo poderá ser do tipo _screencast_ e é imprescindível a narração contemplando a demonstração de todas as etapas realizadas.
-
 # Avaliação dos modelos criados
 
 ## Métricas utilizadas
