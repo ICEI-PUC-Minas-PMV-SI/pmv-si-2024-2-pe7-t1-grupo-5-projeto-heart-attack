@@ -216,15 +216,15 @@ _Fonte: Envolvidos do Projeto do Eixo 7_
 
 ## Importando as bibliotecas
 
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from sklearn.linear_model import LogisticRegression
+    import pandas as pd
+    import numpy as np
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    from sklearn.model_selection import train_test_split
+    from sklearn.preprocessing import LabelEncoder
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+    from sklearn.linear_model import LogisticRegression
 
 ## Importação e leitura do dataset AtaqueCardiaco
 df = pd.read_csv('/content/datasetAtaqueCardiaco.csv')
