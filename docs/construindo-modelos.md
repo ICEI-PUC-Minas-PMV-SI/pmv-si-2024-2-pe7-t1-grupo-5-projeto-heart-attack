@@ -251,62 +251,62 @@ _Fonte: Envolvidos do Projeto do Eixo 7_
     from sklearn.linear_model import LogisticRegression
 
 ## Importação e leitura do dataset AtaqueCardiaco
-df = pd.read_csv('/content/datasetAtaqueCardiaco.csv')
+    df = pd.read_csv('/content/datasetAtaqueCardiaco.csv')
 
-df.head()
+    df.head()
 
 ## Verificar se há dados faltantes
-df.isnull().sum()
+    df.isnull().sum()
 
 ## Substituir valores ausentes ou eliminando colunas com dados ausentes
-df = df.dropna()
+    df = df.dropna()
 
 ## Codificar variáveis categóricas com LabelEncoder
-label_encoder = LabelEncoder()
+    label_encoder = LabelEncoder()
 
-df['Gender'] = label_encoder.fit_transform(df['Gender'])  # Male=1, Female=0
-df['Has Diabetes'] = label_encoder.fit_transform(df['Has Diabetes'])  # Yes=1, No=0
-df['Smoking Status'] = label_encoder.fit_transform(df['Smoking Status'])  # Never=0, Current=1, etc.
-df['Chest Pain Type'] = label_encoder.fit_transform(df['Chest Pain Type'])  # Codificando tipos de dor
-df['Treatment'] = label_encoder.fit_transform(df['Treatment'])  # Tratamentos como variável alvo
+    df['Gender'] = label_encoder.fit_transform(df['Gender'])  # Male=1, Female=0
+    df['Has Diabetes'] = label_encoder.fit_transform(df['Has Diabetes'])  # Yes=1, No=0
+    df['Smoking Status'] = label_encoder.fit_transform(df['Smoking Status'])  # Never=0, Current=1, etc.
+    df['Chest Pain Type'] = label_encoder.fit_transform(df['Chest Pain Type'])  # Codificando tipos de dor
+    df['Treatment'] = label_encoder.fit_transform(df['Treatment'])  # Tratamentos como variável alvo
 
 ## Visualizando as primeiras linhas após o pré-processamento
-df.head()
+    df.head()
 
 ## Definindo as variáveis independentes (X) e dependente (y)
-X = df.drop('Treatment', axis=1)  # Removendo a coluna 'Treatment' para ser a variável alvo
-y = df['Treatment']  # Variável alvo
+    X = df.drop('Treatment', axis=1)  # Removendo a coluna 'Treatment' para ser a variável alvo
+    y = df['Treatment']  # Variável alvo
 
 ## Dividindir os dados em treino (80%) e teste (20%)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 ## Visualizando as dimensões dos dados de treino e teste
-print(f"Tamanho do conjunto de treino: {X_train.shape}")
-print(f"Tamanho do conjunto de teste: {X_test.shape}")
+    print(f"Tamanho do conjunto de treino: {X_train.shape}")
+    print(f"Tamanho do conjunto de teste: {X_test.shape}")
 
 ## Criar o modelo Random Forest
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
 
 ## Treinar o modelo com os dados de treino
-model.fit(X_train, y_train)
+    model.fit(X_train, y_train)
 
 ## Fazer previsões com os dados de teste
-y_pred = model.predict(X_test)
+    y_pred = model.predict(X_test)
 
 ## Avaliar o modelo
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Acurácia do modelo: {accuracy * 100:.2f}%")
+    accuracy = accuracy_score(y_test, y_pred)
+    print(f"Acurácia do modelo: {accuracy * 100:.2f}%")
 
 ## Relatório de classificação
-print(classification_report(y_test, y_pred))
+    print(classification_report(y_test, y_pred))
 
 ## Matriz de confusão
-conf_matrix = confusion_matrix(y_test, y_pred)
-sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=label_encoder.classes_, yticklabels=label_encoder.classes_)
-plt.xlabel('Predição')
-plt.ylabel('Real')
-plt.title('Matriz de Confusão')
-plt.show()
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=label_encoder.classes_, yticklabels=label_encoder.classes_)
+    plt.xlabel('Predição')
+    plt.ylabel('Real')
+    plt.title('Matriz de Confusão')
+    plt.show()
 
 ![image](https://github.com/user-attachments/assets/feb5d87c-5400-48e9-8230-d9066fb5142d)
 ![image](https://github.com/user-attachments/assets/c459df4f-6f66-40e2-983c-7d994447605d)
