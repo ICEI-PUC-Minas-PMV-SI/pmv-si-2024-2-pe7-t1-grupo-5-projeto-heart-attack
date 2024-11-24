@@ -287,6 +287,8 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/feb5d87c-5400-48e9-8230-d9066fb5142d)
 ![image](https://github.com/user-attachments/assets/c459df4f-6f66-40e2-983c-7d994447605d)
 
+Fonte: Envolvidos do Projeto do Eixo 7
+
 
 
 # Descrição dos modelos
