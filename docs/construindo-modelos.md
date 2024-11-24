@@ -348,7 +348,19 @@ Nesta seção, discuta os resultados obtidos pelos modelos construídos, no cont
 
 # Pipeline de pesquisa e análise de dados
 
-Em pesquisa e experimentação em sistemas de informação, um pipeline de pesquisa e análise de dados refere-se a um conjunto organizado de processos e etapas que um profissional segue para realizar a coleta, preparação, análise e interpretação de dados durante a fase de pesquisa e desenvolvimento de modelos. Esse pipeline é essencial para extrair _insights_ significativos, entender a natureza dos dados e, construir modelos de aprendizado de máquina eficazes. 
+O pipeline utilizado consiste em uma sequência de etapas para treinar e avaliar modelos de machine learning. Os modelos aplicados foram:
+
+KNN (K-Nearest Neighbors): Classificador baseado na proximidade entre os dados.
+
+Árvore de Decisão: Modelo que toma decisões baseadas em regras em uma estrutura hierárquica.
+
+Naive Bayes: Classificador probabilístico baseado no teorema de Bayes e suposição de independência entre as variáveis.
+
+Floresta Aleatória: Conjunto de árvores de decisão, combinando previsões para maior precisão.
+
+Híbrido (Voting Classifier e Logistic Regression): Um modelo combinado onde múltiplos classificadores fazem votos para determinar a previsão final, utilizando também regressão logística para melhorar a precisão.
+
+Esses modelos foram integrados em um pipeline para processamento e avaliação consistentes dos dados.
 
 ## Observações importantes
 
