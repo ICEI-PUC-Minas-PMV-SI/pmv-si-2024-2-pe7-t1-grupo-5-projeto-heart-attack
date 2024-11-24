@@ -1,6 +1,6 @@
 # Preparação dos dados
 
-# Modelo Árvore de Decisão - Decision Tree
+# Modelo - Árvore de Decisão - Decision Tree
 
 ![image](https://github.com/user-attachments/assets/03d01f1b-d7b5-4947-bd1c-5bf9c5cd47ff)
 
@@ -236,7 +236,7 @@ _Fonte: Envolvidos do Projeto do Eixo 7_
 
 _Fonte: Envolvidos do Projeto do Eixo 7_
 
-# MODELO RANDOM FOREST CLASSFIER (Floreta Aleatória)
+# Modelo - Random Forest Classifier (Floresta Aleatória) 
 
 ## Importando as bibliotecas
 
@@ -251,77 +251,83 @@ _Fonte: Envolvidos do Projeto do Eixo 7_
     from sklearn.linear_model import LogisticRegression
 
 ## Importação e leitura do dataset AtaqueCardiaco
-df = pd.read_csv('/content/datasetAtaqueCardiaco.csv')
+    df = pd.read_csv('/content/datasetAtaqueCardiaco.csv')
 
-df.head()
+    df.head()
 
 ## Verificar se há dados faltantes
-df.isnull().sum()
+    df.isnull().sum()
 
 ## Substituir valores ausentes ou eliminando colunas com dados ausentes
-df = df.dropna()
+    df = df.dropna()
 
 ## Codificar variáveis categóricas com LabelEncoder
-label_encoder = LabelEncoder()
+    label_encoder = LabelEncoder()
 
-df['Gender'] = label_encoder.fit_transform(df['Gender'])  # Male=1, Female=0
-df['Has Diabetes'] = label_encoder.fit_transform(df['Has Diabetes'])  # Yes=1, No=0
-df['Smoking Status'] = label_encoder.fit_transform(df['Smoking Status'])  # Never=0, Current=1, etc.
-df['Chest Pain Type'] = label_encoder.fit_transform(df['Chest Pain Type'])  # Codificando tipos de dor
-df['Treatment'] = label_encoder.fit_transform(df['Treatment'])  # Tratamentos como variável alvo
+    df['Gender'] = label_encoder.fit_transform(df['Gender'])  # Male=1, Female=0
+    df['Has Diabetes'] = label_encoder.fit_transform(df['Has Diabetes'])  # Yes=1, No=0
+    df['Smoking Status'] = label_encoder.fit_transform(df['Smoking Status'])  # Never=0, Current=1, etc.
+    df['Chest Pain Type'] = label_encoder.fit_transform(df['Chest Pain Type'])  # Codificando tipos de dor
+    df['Treatment'] = label_encoder.fit_transform(df['Treatment'])  # Tratamentos como variável alvo
 
 ## Visualizando as primeiras linhas após o pré-processamento
-df.head()
+    df.head()
 
 ## Definindo as variáveis independentes (X) e dependente (y)
-X = df.drop('Treatment', axis=1)  # Removendo a coluna 'Treatment' para ser a variável alvo
-y = df['Treatment']  # Variável alvo
+    X = df.drop('Treatment', axis=1)  # Removendo a coluna 'Treatment' para ser a variável alvo
+    y = df['Treatment']  # Variável alvo
 
 ## Dividindir os dados em treino (80%) e teste (20%)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 ## Visualizando as dimensões dos dados de treino e teste
-print(f"Tamanho do conjunto de treino: {X_train.shape}")
-print(f"Tamanho do conjunto de teste: {X_test.shape}")
+    print(f"Tamanho do conjunto de treino: {X_train.shape}")
+    print(f"Tamanho do conjunto de teste: {X_test.shape}")
 
 ## Criar o modelo Random Forest
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
 
 ## Treinar o modelo com os dados de treino
-model.fit(X_train, y_train)
+    model.fit(X_train, y_train)
 
 ## Fazer previsões com os dados de teste
-y_pred = model.predict(X_test)
+    y_pred = model.predict(X_test)
 
 ## Avaliar o modelo
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Acurácia do modelo: {accuracy * 100:.2f}%")
+    accuracy = accuracy_score(y_test, y_pred)
+    print(f"Acurácia do modelo: {accuracy * 100:.2f}%")
 
 ## Relatório de classificação
-print(classification_report(y_test, y_pred))
+    print(classification_report(y_test, y_pred))
 
 ## Matriz de confusão
-conf_matrix = confusion_matrix(y_test, y_pred)
-sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=label_encoder.classes_, yticklabels=label_encoder.classes_)
-plt.xlabel('Predição')
-plt.ylabel('Real')
-plt.title('Matriz de Confusão')
-plt.show()
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=label_encoder.classes_, yticklabels=label_encoder.classes_)
+    plt.xlabel('Predição')
+    plt.ylabel('Real')
+    plt.title('Matriz de Confusão')
+    plt.show()
 
 ![image](https://github.com/user-attachments/assets/feb5d87c-5400-48e9-8230-d9066fb5142d)
 ![image](https://github.com/user-attachments/assets/c459df4f-6f66-40e2-983c-7d994447605d)
 
 Fonte: Envolvidos do Projeto do Eixo 7
 
+# Modelo - Híbrido
 
+![Captura de tela 2024-11-24 164330](https://github.com/user-attachments/assets/1f2558a3-9180-441a-8ba2-03f7d00702fc)
 
-# Descrição dos modelos
+![Captura de tela 2024-11-24 164343](https://github.com/user-attachments/assets/af569b1a-e6f2-40c8-b273-37daaed11c45)
 
-Nesta seção, conhecendo os dados e de posse dos dados preparados, é hora de descrever os algoritmos de aprendizado de máquina selecionados para a construção dos modelos propostos. Inclua informações abrangentes sobre cada algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha de cada um dos algoritmos. 
+![Captura de tela 2024-11-24 164356](https://github.com/user-attachments/assets/d37b64e6-db75-4f32-82fb-ef6ec18c0e58)
 
-Explore aspectos específicos, como o ajuste dos parâmetros livres de cada algoritmo. Lembre-se de experimentar parâmetros diferentes e principalmente, de justificar as escolhas realizadas.
+![Captura de tela 2024-11-24 164408](https://github.com/user-attachments/assets/71bf5441-9a4b-478c-8be5-06f44a860b99)
 
-Como parte da comprovação de construção dos modelos, um vídeo de demonstração com todas as etapas de pré-processamento e de execução dos modelos deverá ser entregue. Este vídeo poderá ser do tipo _screencast_ e é imprescindível a narração contemplando a demonstração de todas as etapas realizadas.
+![Captura de tela 2024-11-24 164422](https://github.com/user-attachments/assets/c19ef695-10e7-45e1-9592-e350158c6c4e)
+
+![Captura de tela 2024-11-24 164435](https://github.com/user-attachments/assets/010b389d-1cb8-4d07-98d2-039a9647a7b1)
+
+![Captura de tela 2024-11-24 164507](https://github.com/user-attachments/assets/f91ecc85-6041-46f1-9aaf-dcaf89028012)
 
 # Avaliação dos modelos criados
 
