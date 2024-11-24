@@ -1,6 +1,6 @@
 # Preparação dos dados
 
-# Modelo Árvore de Decisão - Decision Tree
+# Modelo - Árvore de Decisão - Decision Tree
 
 ![image](https://github.com/user-attachments/assets/03d01f1b-d7b5-4947-bd1c-5bf9c5cd47ff)
 
@@ -236,7 +236,7 @@ _Fonte: Envolvidos do Projeto do Eixo 7_
 
 _Fonte: Envolvidos do Projeto do Eixo 7_
 
-# MODELO RANDOM FOREST CLASSFIER (Floreta Aleatória)
+# Modelo - Random Forest Classifier (Floresta Aleatória) 
 
 ## Importando as bibliotecas
 
@@ -313,7 +313,21 @@ _Fonte: Envolvidos do Projeto do Eixo 7_
 
 Fonte: Envolvidos do Projeto do Eixo 7
 
+# Modelo - Híbrido
 
+![Captura de tela 2024-11-24 164330](https://github.com/user-attachments/assets/1f2558a3-9180-441a-8ba2-03f7d00702fc)
+
+![Captura de tela 2024-11-24 164343](https://github.com/user-attachments/assets/af569b1a-e6f2-40c8-b273-37daaed11c45)
+
+![Captura de tela 2024-11-24 164356](https://github.com/user-attachments/assets/d37b64e6-db75-4f32-82fb-ef6ec18c0e58)
+
+![Captura de tela 2024-11-24 164408](https://github.com/user-attachments/assets/71bf5441-9a4b-478c-8be5-06f44a860b99)
+
+![Captura de tela 2024-11-24 164422](https://github.com/user-attachments/assets/c19ef695-10e7-45e1-9592-e350158c6c4e)
+
+![Captura de tela 2024-11-24 164435](https://github.com/user-attachments/assets/010b389d-1cb8-4d07-98d2-039a9647a7b1)
+
+![Captura de tela 2024-11-24 164507](https://github.com/user-attachments/assets/f91ecc85-6041-46f1-9aaf-dcaf89028012)
 
 # Descrição dos modelos
 
