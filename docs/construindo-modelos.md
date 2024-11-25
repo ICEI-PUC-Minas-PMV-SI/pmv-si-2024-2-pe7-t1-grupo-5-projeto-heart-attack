@@ -325,7 +325,9 @@ A fonte de definicação está anexado na etapa 1.
 
 ## Discussão dos resultados obtidos
 
-Nesta seção, discuta os resultados obtidos pelos modelos construídos, no contexto prático em que os dados se inserem, promovendo uma compreensão abrangente e aprofundada da qualidade de cada um deles. Lembre-se de relacionar os resultados obtidos ao problema identificado, a questão de pesquisa levantada e estabelecendo relação com os objetivos previamente propostos. 
+Dentro das análises desenvolvidas, o nível de acurácia permaneceu muito baixo - entre 19% e 27% - o que não permite muito avanço dentro do problema encontrado no desenvolvimento da pesquisa. É inviável propor decisões e sugestões de tratamento com níveis tão baixos pois além de baixa credibilidade, as propostas podem até mesmo prejudicar as tomadas de decisões dos profissionais da saúde responsáveis por fornecer tratamento.
+
+Caberá análise futura e aprofundada dos dados para compreender o motivo de tal baixa acurácia e tentar desenvolver novos estudos e análises de probabilidade para aumentar a viabilidade e eficácia das propostas.
 
 # Pipeline de pesquisa e análise de dados
 
@@ -342,12 +344,6 @@ Floresta Aleatória: Conjunto de árvores de decisão, combinando previsões par
 Híbrido (Voting Classifier e Logistic Regression): Um modelo combinado onde múltiplos classificadores fazem votos para determinar a previsão final, utilizando também regressão logística para melhorar a precisão.
 
 Esses modelos foram integrados em um pipeline para processamento e avaliação consistentes dos dados.
-
-## Observações importantes
-
-Todas as tarefas realizadas nesta etapa deverão ser registradas em formato de texto junto com suas explicações de forma a apresentar  os códigos desenvolvidos e também, o código deverá ser incluído, na íntegra, na pasta "src".
-
-Além disso, deverá ser entregue um vídeo onde deverão ser descritas todas as etapas realizadas. O vídeo, que não tem limite de tempo, deverá ser apresentado por **todos os integrantes da equipe**, de forma que, cada integrante tenha oportunidade de apresentar o que desenvolveu e as  percepções obtidas.
 
 
 
