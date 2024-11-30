@@ -1,0 +1,37 @@
+body {
+    font-family: Calibri, sans-serif;
+    padding-top: 0; /* Removendo espaçamento entre o topo da página e a navbar */
+}
+h1 {
+    text-align: center;
+    position: relative;
+    padding-top: 50 px;
+    color: #008000;
+}
+label, input, select {
+    color: #008000;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 30px;
+}
+.btn-add-expense {
+    background-color: #008000;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-add-expense:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+.btn-add-expense:hover::after {
+    content: " > Submeter Despesa";
+}
+
+.dropdown-menu {
+    background-color: #008000;
+}
+.dropdown-menu .dropdown-item {
+    color: #ffffff !important;
+}

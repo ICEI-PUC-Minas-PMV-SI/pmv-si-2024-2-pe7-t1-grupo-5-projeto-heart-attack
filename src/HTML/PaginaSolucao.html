@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Despesas de Viagem</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="/src/CSS/EstiloPagina.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <h1>Cadastro de Funcionário</h1>
+    
+    <div class="form-group">
+        <label for="expense-type">Selecione o seu gênero:</label>
+        <select id="expense-type" name="expense-type" class="form-control" required>
+            <option value="">Gênero não selecionado</option>
+            <option value= 1 >Homem</option>
+            <option value= 0 >Mulher</option>
+        </select>
+    </div>
+
+
+    <form id="expense-form">
+        <div class="form-group">
+            <label for="age">Coloque sua idade:</label>
+            <input type="number" id="age" name="age" class="form-control" required>
+        </div>
+        
+        
+        <div class="form-group">
+            <label for="expense-amount">Nome Completo do Funcionário:</label>
+            <input type="text" id="expense-amount" name="expense-amount" class="form-control" required>
+            
+        </div>
+        
+    
+
+        <div class="form-group">
+            <label for="expense-state">Escolha a Regional:</label>
+            <select id="expense-state" name="expense-state" class="form-control" required>
+                <!-- Options for states will be dynamically added here -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="expense-city">Cidade:</label>
+            <select id="expense-city" name="expense-city" class="form-control" required>
+                <!-- Options for cities will be dynamically added here -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="expense-receipt">Identificação Oficial Com Foto  (JPG):</label>
+            <input type="file" id="expense-receipt" name="expense-receipt" accept="image/jpeg" class="form-control-file" required>
+        </div>
+        
+        <button  type="submit" class="btn btn-add-expense">Cadastrar Funcionário</button>
+    </form>
+
+    <div id="expense-list">
+        <!-- Aqui serão exibidas as despesas cadastradas -->
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        // Inicializando o plugin Select2 para tornar a seleção de cidades mais amigável
+        $('#expense-city').select2();
+
+        // Carregar estados
+        $.getJSON("https://servicodados.ibge.gov.br/api/v1/localidades/estados", function(data){
+            // Ordenar os estados em ordem alfabética
+            data.sort((a, b) => (a.nome > b.nome) ? 1 : -1);
+            $.each(data, function(key, value){
+                $('#expense-state').append('<option value="' + value.sigla + '">' + value.nome + '</option>');
+            });
+        });
+
+        // Quando o estado é selecionado, carregar cidades
+        $('#expense-state').on('change', function(){
+            var uf = $(this).val();
+            $('#expense-city').empty();
+            $.getJSON("https://servicodados.ibge.gov.br/api/v1/localidades/estados/" + uf + "/municipios", function(data){
+                $.each(data, function(key, value){
+                    $('#expense-city').append('<option value="' + value.nome + '">' + value.nome + '</option>');
+                });
+            });
+        });
+
+        // Formatando o campo de valor da despesa enquanto o usuário digita
+        $('#expense-amount').on('input', function(){
+            // Obtendo o valor atual do campo
+            var value = $(this).val();
+            // Removendo todos os caracteres que não são números ou vírgulas
+            value = value.replace(/[^\d,]/g, '');
+
+            // Separando o valor em reais e centavos
+            var parts = value.split(',');
+            var reais = parts[0].replace(/\D/g, ''); // Removendo caracteres não numéricos
+            var centavos = parts[1] || ''; // Pode não existir centavos
+
+            // Limitando a 5 dígitos antes da vírgula
+            reais = reais.substring(0, 5);
+
+            // Adicionando ponto para separar milhares, se houver
+            reais = reais.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+            // Recriando o valor com ponto para separar milhares e vírgula para separar centavos, se houver
+            value = reais + (centavos !== '' ? ',' + centavos : '');
+
+            // Atualizando o valor do campo
+            $(this).val('R$ ' + value);
+        });
+    });
+</script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
