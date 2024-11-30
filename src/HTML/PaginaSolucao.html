@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento de Despesas de Viagem</title>
+    <title>Projeto Heart-Attack</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="/src/CSS/EstiloPagina.css">
@@ -32,14 +32,29 @@
             <input type="number" id="age" name="age" class="form-control" required>
         </div>
         
-        
+    <form id="expense-form">
         <div class="form-group">
-            <label for="expense-amount">Nome Completo do Funcionário:</label>
-            <input type="text" id="expense-amount" name="expense-amount" class="form-control" required>
-            
+            <label for="BloodPressure">Coloque sua pressão sanguínea:</label>
+            <input type="number" id="BloodPressure" name="BloodPressure" class="form-control" required>
         </div>
-        
-    
+
+    <form id="expense-form">
+        <div class="form-group">
+            <label for="Cholesterol">Coloque seu colesterol:</label>
+            <input type="number" id="Cholesterol" name="Cholesterol" class="form-control" required>
+        </div>
+
+    <div class="form-group">
+        <label for="expense-type">Você possui diabetes?</label>
+        <select id="expense-type" name="expense-type" class="form-control" required>
+            <option value="">Selecione um valor</option>
+            <option value= 1 >Sim</option>
+            <option value= 0 >Não</option>
+        </select>
+    </div>
+
+ 
+ 
 
         <div class="form-group">
             <label for="expense-state">Escolha a Regional:</label>
