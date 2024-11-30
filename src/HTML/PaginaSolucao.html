@@ -53,29 +53,27 @@
         </select>
     </div>
 
+
+    <div class="form-group">
+        <label for="expense-type">Qual tipo de dor você sente?</label>
+        <select id="expense-type" name="expense-type" class="form-control" required>
+            <option value="">Selecione um valor</option>
+            <option value= 1 >Angina típica</option>
+            <option value= 2 >Angina Atípica</option>
+            <option value= 3 >Dor Não Anginosa</option>
+            <option value= 4 >Assintomático</option>
+        </select>
+    </div>
+
+
  
  
 
         <div class="form-group">
-            <label for="expense-state">Escolha a Regional:</label>
-            <select id="expense-state" name="expense-state" class="form-control" required>
-                <!-- Options for states will be dynamically added here -->
-            </select>
-        </div>
 
-        <div class="form-group">
-            <label for="expense-city">Cidade:</label>
-            <select id="expense-city" name="expense-city" class="form-control" required>
-                <!-- Options for cities will be dynamically added here -->
-            </select>
         </div>
         
-        <div class="form-group">
-            <label for="expense-receipt">Identificação Oficial Com Foto  (JPG):</label>
-            <input type="file" id="expense-receipt" name="expense-receipt" accept="image/jpeg" class="form-control-file" required>
-        </div>
-        
-        <button  type="submit" class="btn btn-add-expense">Cadastrar Funcionário</button>
+        <button  type="submit" class="btn btn-add-expense">Submeter Resposta</button>
     </form>
 
     <div id="expense-list">

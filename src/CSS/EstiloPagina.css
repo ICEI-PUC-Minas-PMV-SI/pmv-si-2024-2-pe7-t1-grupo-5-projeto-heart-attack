@@ -25,9 +25,7 @@ label, input, select {
     background-color: #ff0000;
     color: #ffffff;
 }
-.btn-add-expense:hover::after {
-    content: " > Submeter Despesa";
-}
+
 
 .dropdown-menu {
     background-color: #008000;
