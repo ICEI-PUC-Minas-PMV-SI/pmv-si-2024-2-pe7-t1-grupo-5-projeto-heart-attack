@@ -294,7 +294,7 @@ O dataset escolhido para o tema contém atributos pertinentes para criação do 
 * Pressão Arterial:  variável quantitativa do tipo numérico. De acordo com a UFMG, pressão arterial é a força que o sangue executa contra as paredes da artéria. A partir disso, será possível verificar se os pacientes possuem ou não hipertensão, um fator importante para ataques cardíacos. Range de 90 a 199;
 * Colesterol: variável quantitativa do tipo numérico. Segundo o Hospital Israelita Robert Einstein, colesterol é uma gordura que está no organismo do ser humano, o qual produz hormônios masculinos, femininos e também a vitamina D. Este também é um dos principais fatores para ocorrência de um infarto. Range de 150 a 299; 
 * Se possui ou não diabete: dado booleano que é considerado qualitativo. Ele indica basicamente se a pessoa possui ou não diabete. Sim = possui diabetes, não = não possui diabetes.
-* Situação sobre fumar: dado qualitativo que indica se a pessoa fuma por três categorias. Nunca fumou, fuma atualmente, outros;
+* Situação sobre fumar: dado qualitativo que indica se a pessoa fuma por três categorias. Nunca fumou, fuma atualmente e antigamente;
 * Tipo de dor no peito: dado qualitativo que indica alguns tipos de dor no peito que os pacientes sentiram. Dor anginosa típica, dor anginosa atípica, do não anginosa e assintomático.
 * Tratamento utilizado: dado qualitativo o qual mostra os tratamentos recebidos pelos pacientes do dataset. Mudanças no estilo de vida, Angioplastia, Bypass ou uso de Medicação.
 
