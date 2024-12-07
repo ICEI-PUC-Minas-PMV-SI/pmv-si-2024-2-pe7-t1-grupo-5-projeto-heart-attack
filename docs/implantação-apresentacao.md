@@ -8,3 +8,7 @@ Após a implantação, realize testes que mostrem o correto funcionamento da apl
 
 Nesta seção, um vídeo de, no máximo, 5 minutos onde deverá ser descrito o escopo todo do projeto, um resumo do trabalho desenvolvido, incluindo a comprovação de que a implantação foi realizada e, as conclusões alcançadas.
 
+O vídeo foi postado no Youtube por conta do tamanho do vídeo.
+
+Segue o link: 
+https://youtu.be/PgXA3ixuCf4
