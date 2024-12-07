@@ -4,6 +4,8 @@ Nesta seção, a implantação da solução proposta em nuvem deverá ser realiz
 
 Após a implantação, realize testes que mostrem o correto funcionamento da aplicação.
 
+O código da página foi anexado na pasta HTML, dentro de SRC.
+
 # Apresentação da solução
 
 Nesta seção, um vídeo de, no máximo, 5 minutos onde deverá ser descrito o escopo todo do projeto, um resumo do trabalho desenvolvido, incluindo a comprovação de que a implantação foi realizada e, as conclusões alcançadas.
