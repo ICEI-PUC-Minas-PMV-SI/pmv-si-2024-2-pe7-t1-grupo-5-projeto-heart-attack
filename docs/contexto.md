@@ -295,8 +295,8 @@ O dataset escolhido para o tema contém atributos pertinentes para criação do 
 * Colesterol: variável quantitativa do tipo numérico. Segundo o Hospital Israelita Robert Einstein, colesterol é uma gordura que está no organismo do ser humano, o qual produz hormônios masculinos, femininos e também a vitamina D. Este também é um dos principais fatores para ocorrência de um infarto. Range de 150 a 299; 
 * Se possui ou não diabete: dado booleano que é considerado qualitativo. Ele indica basicamente se a pessoa possui ou não diabete. Sim = possui diabetes, não = não possui diabetes.
 * Situação sobre fumar: dado qualitativo que indica se a pessoa fuma por três categorias. Nunca fumou, fuma atualmente, outros;
-* Tipo de dor no peito: dado qualitativo que indica alguns tipos de dor no peito que os pacientes sentiram. Dor não anginosa, assintomáticos, outros.
-* Tratamento utilizado: dado qualitativo o qual mostra os tratamentos recebidos pelos pacientes do dataset. Mudanças no estilo de vida, Cirurgia de Revascularização do Miocárdio (Ponte de Safena), outros.
+* Tipo de dor no peito: dado qualitativo que indica alguns tipos de dor no peito que os pacientes sentiram. Dor anginosa típica, dor anginosa atípica, do não anginosa e assintomático.
+* Tratamento utilizado: dado qualitativo o qual mostra os tratamentos recebidos pelos pacientes do dataset. Mudanças no estilo de vida, Angioplastia, Bypass ou uso de Medicação.
 
 
 Ao analisar cada um dos atributos desta base de dados, foi possível concluir que não será necessário realizar uma limpeza nos dados, pois não foi encontrado valores inesperados dentro do dataset.
