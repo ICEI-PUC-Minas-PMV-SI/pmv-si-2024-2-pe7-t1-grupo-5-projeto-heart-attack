@@ -345,6 +345,10 @@ Híbrido (Voting Classifier e Logistic Regression): Um modelo combinado onde mú
 
 Esses modelos foram integrados em um pipeline para processamento e avaliação consistentes dos dados.
 
+# Apresentação dos modelos
+
+https://github.com/user-attachments/assets/3d78c578-a883-4f79-83af-36826d637deb
+
 
 
 
